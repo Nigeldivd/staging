@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIVD.works</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Enable dark mode based on system preference
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+    </script>
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/members.css" />
+        <link rel="stylesheet" href="/css/bullet.css">
+        <link rel="preload" href="/fonts/ArialRoundedMTBold.woff2" as="font" type="/fonts/woff2" crossorigin>\
+
+        <style>
+            /* force all the yellow :-) */
+            body, h1, h2, h3, h4, h5, h6, p, a, span, li, div {
+                color: #FFD736 !important;
+            }
+        </style>
+
+</head>
+<body class="bg-black text-[#FFD736] dark:bg-black dark:text-[#FFD736]">
+
+    <!-- Header Section -->
+    <!-- <header class="bg-white shadow-md dark:bg-gray-800">
+        <div class="container mx-auto flex justify-between items-center p-4">
+            <h1 class="text-2xl font-bold text-blue-600 dark:text-blue-400">DIVD.works</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="#" class="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">Home</a></li>
+                    <li><a href="#" class="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">About</a></li>
+                    <li><a href="#" class="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header> -->
+
+    <!-- Main Content -->
+    <main class="container mx-auto py-10 px-4">
+        <!-- Introduction Section -->
+        <section class="text-center mb-12">
+            <h2 class="text-3xl font-semibold mb-4">Powered by Purpose</h2>
+            <p class="text-lg text-gray-700 dark:text-gray-300 mb-6">
+                The goal of the DIVD.works project is to create a platform that brings together young digital talent and employers. We help you not only further develop your skills but also find an internship or (part-time) job that suits you. 
+            </p>
+            <p class="text-lg text-gray-700 dark:text-gray-300 mb-6">
+                Finding an internship – or later a graduation internship – turns out to be quite a challenge, causing more and more young people to give up. A shame, isn’t it?
+            </p>
+        </section>
+
+        <section class="text-center mb-12">
+            <p class="text-lg text-gray-700 dark:text-gray-300 mb-6">
+                <a href="/join/">And we can’t do this alone.</a>
+            </p>
+
+            <p class="text-lg text-gray-700 dark:text-gray-300 mb-6">
+                <a href="/apply/internship/">Are you looking for an amazing internship opportunity?</a>
+            </p>
+        </section>
+
+
+        <!-- Countdown Section -->
+        <section class="text-center mb-12">
+            <h3 class="text-2xl font-semibold mb-4">Our website and the full project will be completed in:</h3>
+            <div id="countdown" class="text-4xl font-bold text-blue-600 dark:text-blue-400"></div>
+        </section>
+
+        <!-- Team Section -->
+        <section>
+            <h3 class="text-2xl font-semibold text-center mb-8">DIVD.works Team</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <!-- Team Member -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center dark:bg-gray-800">
+                    <img src="/img/Victor.jpg" alt="Victor Gevers" class="w-32 h-32 mx-auto rounded-full mb-4">
+                    <h4 class="text-xl font-semibold">Victor Gevers</h4>
+                    <p class="text-gray-600 dark:text-gray-400">CEO</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center dark:bg-gray-800">
+                    <img src="/img/akiko.jpeg" alt="Akiko Takashima" class="w-32 h-32 mx-auto rounded-full mb-4">
+                    <h4 class="text-xl font-semibold">Akiko Takashima</h4>
+                    <p class="text-gray-600 dark:text-gray-400">Chief Financial Officer</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center dark:bg-gray-800">
+                    <img src="/img/stock.jpg" alt="Jared Hofman" class="w-32 h-32 mx-auto rounded-full mb-4">
+                    <h4 class="text-xl font-semibold">Jared Hofman</h4>
+                    <p class="text-gray-600 dark:text-gray-400">Senior Vice President, Business Operations</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center dark:bg-gray-800">
+                    <img src="/img/Liam.jpeg" alt="Liam Plokkaar" class="w-32 h-32 mx-auto rounded-full mb-4">
+                    <h4 class="text-xl font-semibold">Liam Plokkaar</h4>
+                    <p class="text-gray-600 dark:text-gray-400">Senior Vice President, Sales</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center dark:bg-gray-800">
+                    <img src="/img/baran.jpeg" alt="Baran Canakci" class="w-32 h-32 mx-auto rounded-full mb-4">
+                    <h4 class="text-xl font-semibold">Baran Canakci</h4>
+                    <p class="text-gray-600 dark:text-gray-400">Chief Marketing Officer</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center dark:bg-gray-800">
+                    <img src="/img/Loek.jpeg"" alt="Loek Ota" class="w-32 h-32 mx-auto rounded-full mb-4">
+                    <h4 class="text-xl font-semibold">Loek Ota</h4>
+                    <p class="text-gray-600 dark:text-gray-400">Senior Vice President, Chief People Office</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center dark:bg-gray-800">
+                    <img src="/img/Luc.jpeg" alt="Luc van Kessel" class="w-32 h-32 mx-auto rounded-full mb-4">
+                    <h4 class="text-xl font-semibold">Luc van Kessel</h4>
+                    <p class="text-gray-600 dark:text-gray-400">Senior Vice President, Support</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center dark:bg-gray-800">
+                    <img src="/img/Dirk.jpeg" alt="Dirk Rijntalder" class="w-32 h-32 mx-auto rounded-full mb-4">
+                    <h4 class="text-xl font-semibold">Dirk Rijntalder</h4>
+                    <p class="text-gray-600 dark:text-gray-400">Senior Vice President, Chief Legal Officer</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center dark:bg-gray-800">
+                    <img src="/img/stock.jpg" alt="Vacancy" class="w-32 h-32 mx-auto rounded-full mb-4">
+                    <h4 class="text-xl font-semibold">Vacancy</h4>
+                    <p class="text-gray-600 dark:text-gray-400">Senior Vice President, Safety & Core Services</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center dark:bg-gray-800">
+                    <img src="/img/stock.jpg" alt="CISO" class="w-32 h-32 mx-auto rounded-full mb-4">
+                    <h4 class="text-xl font-semibold">CISO</h4>
+                    <p class="text-gray-600 dark:text-gray-400">CISO</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white text-center py-6 dark:bg-black">
+        <p>&copy; 2025 DIVD.works. All rights reserved.</p>
+    </footer>
+
+    <!-- Countdown Script -->
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("Apr 4, 2025 00:00:00").getTime();
+
+        // Update the count down every 1 second
+        var countdownfunction = setInterval(function() {
+            var now = new Date().getTime();
+            var distance = countDownDate - now;
+
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+            + minutes + "m " + seconds + "s ";
+
+            if (distance < 0) {
+                clearInterval(countdownfunction);
+                document.getElementById("countdown").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
