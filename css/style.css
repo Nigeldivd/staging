@@ -230,3 +230,19 @@ li::marker {
     0% { translate: 0 70%; opacity: 0.3; }
     100% { translate: 0 64%; opacity: 0.8; }
 }
+
+.video {
+    filter: grayscale(100%) !important;
+    transition: filter 0.8s ease-in-out;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    justify-content: center;
+    max-width: 100%;
+  }
+
+  video:hover {
+    filter: grayscale(0%) !important;
+  }
