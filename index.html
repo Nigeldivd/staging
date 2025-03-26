@@ -130,6 +130,29 @@
             </p>
         </section>
 
+
+
+        <!-- Newsroom items-->
+
+        <section class="text-center mb-12">
+        <div id="substack-feed-embed"></div>
+        <script>
+          window.SubstackFeedWidget = {
+            substackUrl: "newsroom.divd.works",
+            posts: 1,
+            hidden: ["author", "reactions", "comments"],
+            colors: {
+              primary: "#FFD736",
+              secondary: "#FFD736",
+              background: "#000000",
+            }
+          };
+        </script>
+        <script src="https://substackapi.com/embeds/feed.js" async></script>
+        </section>
+
+
+
         <!-- Substack Newsletter -->
         <section class="text-center mb-12">
             <p class="text-2xl text-gray-700 dark:text-gray-300 mb-6">
@@ -199,7 +222,7 @@
         ">
             Can't wait? Ask us anything!
         </a>
-        
+
     </main>
 
         <!-- Team Section -->
