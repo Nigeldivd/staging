@@ -143,7 +143,7 @@
     </svg>
     </div>
 
-     <!-- <div class="flex flex-col items-center justify-center text-white">
+          <!-- <div class="flex flex-col items-center justify-center text-white">
           <iframe
           id="JotFormIFrame-250454217214347"
           title="DIVD.Works: Volunteer Registration Form "
@@ -155,50 +155,54 @@
           style="min-width:100%;max-width:100%;border:none;"
           color = "#ffd736;" 
           scrolling="no">
-            </iframe>  -->
+            </iframe>  
+            <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script>
+            <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-250454217214347']", "https://form.jotform.com/")</script>
+        </div> -->
 
-            <form id="volunteerForm" action="https://submit.jotform.com/submit/250454217214347/" method="POST" class="bg-black p-6 rounded-lg w-full max-w-2xl mx-auto flex flex-col gap-6">
-              <!-- Name Section -->
-              <div class="flex flex-col md:flex-row gap-4">
-                <div class="flex-1">
-                  <label class="block text-sm font-bold mb-2" style="color: #ffd736;">First Name *</label>
-                  <input type="text" name="q1_firstName" placeholder="First Name" class="w-full p-2 bg-black border border-yellow-400 rounded text-[#ffd736]" required>
-                </div>
-                <div class="flex-1">
-                  <label class="block text-sm font-bold mb-2" style="color: #ffd736;">Last Name *</label>
-                  <input type="text" name="q1_lastName" placeholder="Last Name" class="w-full p-2 bg-black border border-yellow-400 rounded text-[#ffd736]" required>
-                </div>
-              </div>
-            
-              <!-- Email Section -->
-              <div>
-                <label class="block text-sm font-bold mb-2" style="color: #ffd736;">Email *</label>
-                <input type="email" name="q2_email" placeholder="example@email.com" class="w-full p-2 bg-black border border-yellow-400 rounded text-[#ffd736]" required>
-                <small class="text-gray-400 block mt-1">Please do not use a hotmail/outlook account</small>
-              </div>
-            
-              <!-- Phone Number Section -->
-              <div>
-                <label class="block text-sm font-bold mb-2" style="color: #ffd736;">Phone Number *</label>
-                <input type="tel" name="q3_phoneNumber" placeholder="0000000000" class="w-full p-2 bg-black border border-yellow-400 rounded text-[#ffd736]" required>
-                <small class="text-gray-400 block mt-1">Please enter a valid phone number.</small>
-              </div>
-            
-              <!-- Address Section -->
-              <div>
-                <label class="block text-sm font-bold mb-2" style="color: #ffd736;">Address *</label>
-                <input type="text" name="q4_address[addr_line1]" placeholder="Street Address" class="w-full p-2 bg-black border border-yellow-400 rounded mb-2 text-[#ffd736]" required>
-                <input type="text" name="q4_address[addr_line2]" placeholder="Street Address Line 2" class="w-full p-2 bg-black border border-yellow-400 rounded mb-2 text-[#ffd736]">
-                <div class="flex flex-col md:flex-row gap-4">
-                  <input type="text" name="q4_address[city]" placeholder="City" class="flex-1 p-2 bg-black border border-yellow-400 rounded text-[#ffd736]" required>
-                  <input type="text" name="q4_address[state]" placeholder="State / Province" class="flex-1 p-2 bg-black border border-yellow-400 rounded text-[#ffd736]" required>
-                </div>
-                <input type="text" name="q4_address[postal]" placeholder="Postal / Zip Code" class="w-full p-2 bg-black border border-yellow-400 rounded mt-2 text-[#ffd736]" required>
-              </div>
-            
-              <div class="mb-4">
-                <label class="block text-sm font-bold" style="color: #ffd736;">Country *</label>
-                <select name="q4_address[country]" class="w-full p-2 bg-black border border-yellow-400 rounded text-[#ffd736]" required>
+        <form id="volunteerForm" action="https://submit.jotform.com/submit/250454217214347/" method="POST" class="bg-black p-6 rounded-lg w-full max-w-2xl mx-auto flex flex-col gap-6">
+          <!-- Name Section -->
+          <div class="flex flex-col md:flex-row gap-4">
+            <div class="flex-1">
+              <label class="block text-sm font-bold mb-2" style="color: #ffd736;">First Name *</label>
+              <input type="text" id="first_4" name="q4_name[first]" placeholder="First Name" class="w-full p-2 bg-black border border-yellow-400 rounded text-[#ffd736]" required>
+            </div>
+            <div class="flex-1">
+              <label class="block text-sm font-bold mb-2" style="color: #ffd736;">Last Name *</label>
+              <input type="text" id="last_4" name="q4_name[last]" placeholder="Last Name" class="w-full p-2 bg-black border border-yellow-400 rounded text-[#ffd736]" required>
+            </div>
+          </div>
+        
+          <!-- Email Section -->
+          <div>
+            <label class="block text-sm font-bold mb-2" style="color: #ffd736;">Email *</label>
+            <input type="email" id="input_5" name="q5_email" placeholder="example@email.com" class="w-full p-2 bg-black border border-yellow-400 rounded text-[#ffd736]" required>
+            <small class="text-gray-400 block mt-1">Please do not use a hotmail/outlook account</small>
+          </div>
+        
+          <!-- Phone Number Section -->
+          <div>
+            <label class="block text-sm font-bold mb-2" style="color: #ffd736;">Phone Number *</label>
+            <input type="tel" id="input_6_full" name="q6_phoneNumber[full]" placeholder="0000000000" class="w-full p-2 bg-black border border-yellow-400 rounded text-[#ffd736]" required>
+            <small class="text-gray-400 block mt-1">Please enter a valid phone number.</small>
+          </div>
+        
+          <!-- Address Section -->
+          <div>
+            <label class="block text-sm font-bold mb-2" style="color: #ffd736;">Address *</label>
+            <input type="text" id="input_20_addr_line1" name="q20_address[addr_line1]" placeholder="Street Address" class="w-full p-2 bg-black border border-yellow-400 rounded mb-2 text-[#ffd736]" required>
+            <input type="text" id="input_20_addr_line2" name="q20_address[addr_line2]" placeholder="Street Address Line 2" class="w-full p-2 bg-black border border-yellow-400 rounded mb-2 text-[#ffd736]">
+            <div class="flex flex-col md:flex-row gap-4">
+              <input type="text" id="input_20_city" name="q20_address[city]" placeholder="City" class="flex-1 p-2 bg-black border border-yellow-400 rounded text-[#ffd736]" required>
+              <input type="text" id="input_20_state" name="q20_address[state]" placeholder="State / Province" class="flex-1 p-2 bg-black border border-yellow-400 rounded text-[#ffd736]" required>
+            </div>
+            <input type="text" id="input_20_postal" name="q20_address[postal]" placeholder="Postal / Zip Code" class="w-full p-2 bg-black border border-yellow-400 rounded mt-2 text-[#ffd736]" required>
+          </div>
+        
+          <!-- Country Section -->
+          <div class="mb-4">
+            <label class="block text-sm font-bold" style="color: #ffd736;">Country *</label>
+            <select id="input_7" name="q7_country" class="w-full p-2 bg-black border border-yellow-400 rounded text-[#ffd736]" required>
                   <option value="" disabled selected>Select your country</option>
                   <option value="Afghanistan">Afghanistan</option>
                   <option value="Albania">Albania</option>
@@ -398,40 +402,44 @@
                 </select>
               </div>
 
-               <!-- LinkedIn Section -->
-  <div>
-    <label class="block text-sm font-bold mb-2" style="color: #ffd736;">LinkedIn Profile or Online CV *</label>
-    <input type="url" name="q5_linkedin" placeholder="URL" class="w-full p-2 bg-black border border-yellow-400 rounded text-[#ffd736]" required>
-  </div>
+<!-- LinkedIn Section -->
+<div>
+  <label class="block text-sm font-bold mb-2" style="color: #ffd736;">LinkedIn Profile or Online CV *</label>
+  <input type="url" id="input_8" name="q8_linkedinProfile" placeholder="URL" class="w-full p-2 bg-black border border-yellow-400 rounded text-[#ffd736]" required>
+</div>
 
-  <!-- Additional Information Section -->
-  <div>
-    <label class="block text-sm font-bold mb-2" style="color: #ffd736;">Something else you would like to share with us?</label>
-    <textarea name="q7_message" placeholder="What makes you you and what makes you truly happy?" class="w-full p-2 bg-black border border-yellow-400 rounded text-[#ffd736]"></textarea>
-  </div>
+<!-- Additional Information Section -->
+<div>
+  <label class="block text-sm font-bold mb-2" style="color: #ffd736;">Something else you would like to share with us?</label>
+  <textarea id="input_11" name="q11_somethingElse" placeholder="What makes you you and what makes you truly happy?" class="w-full p-2 bg-black border border-yellow-400 rounded text-[#ffd736]"></textarea>
+</div>
 
-  <!-- Terms and Conditions Section -->
-  <div class="flex items-start gap-2">
-    <input type="checkbox" id="agree" name="q8_terms" class="mt-1" required>
-    <label for="agree" class="text-sm" style="color: #ffd736;">I agree to <a href="#" class="text-blue-400">the Code of Conduct</a> *</label>
-  </div>
+<!-- Terms and Conditions Section -->
+<div class="flex items-start gap-2">
+  <input type="checkbox" id="agree" name="q12_typeA" class="mt-1" required>
+  <label for="agree" class="text-sm" style="color: #ffd736;">I agree to <a href="https://divd.works/code/" class="text-blue-400">the Code of Conduct</a> *</label>
+</div>
 
-  <!-- Signature Section -->
-  <div>
-    <label class="block text-sm font-bold mb-2" style="color: #ffd736;">Signature *</label>
-    <div class="w-full p-6 bg-white text-black rounded-md flex items-center justify-center">
-      <canvas id="signatureCanvas" class="border border-gray-300 rounded"></canvas>
-    </div>
-    <div class="mt-2 flex justify-between">
-      <button type="button" id="clearSignature" class="bg-gray-500 text-white px-4 py-2 rounded">Clear</button>
-      <input type="hidden" name="q9_signature" id="signatureData">
-    </div>
-    <p id="signatureError" class="text-red-500 text-sm mt-2 hidden">Signature is required.</p>
+<!-- Signature Section -->
+<div>
+  <label class="block text-sm font-bold mb-2" style="color: #ffd736;">Signature *</label>
+  <div class="w-full p-6 bg-white text-black rounded-md flex items-center justify-center">
+    <canvas id="signatureCanvas" class="border border-gray-300 rounded"></canvas>
   </div>
+  <div class="mt-2 flex justify-between">
+    <button type="button" id="clearSignature" class="bg-gray-500 text-white px-4 py-2 rounded">Clear</button>
+    <input type="hidden" id="input_18" name="q18_signature">
+  </div>
+  <p id="signatureError" class="text-red-500 text-sm mt-2 hidden">Signature is required.</p>
+</div>
 
-  <!-- Submit Button -->
-  <button type="submit" class="w-full bg-yellow-400 text-black font-bold py-2 rounded">Submit</button>
+<!-- Submit Button -->
+<button type="submit" class="w-full bg-yellow-400 text-black font-bold py-2 rounded">Submit</button>
 </form>
+
+  <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script>
+  <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-250454217214347']", "https://form.jotform.com/")</script>
+
             
             <div id="thankYouMessage" class="hidden text-center text-[#ffd736] font-bold text-xl mt-6">
               Thank you for filling in the form!
@@ -512,10 +520,7 @@
               });
             </script>
 
-  
-          <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script>
-          <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-250454217214347']", "https://form.jotform.com/")</script>
-      </div>
+
 
           <!-- Footer -->
     <footer class="bg-black">
