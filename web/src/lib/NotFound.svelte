@@ -13,7 +13,7 @@
 <article class="flex justify-center">
     <section
         class="px-3 lg:px-0 py-6 lg:py-12 flex flex-col lg:flex-row items-center bg-white dark:bg-black gap-10
-    lg:gap-6 text-center lg:text-left justify-center w-full lg:w-2/3 h-[47.8vh] md:h-[54.9vh] lg:h-[44.8vh]"
+    lg:gap-6 text-center lg:text-left justify-center w-full lg:w-2/3 h-[66.4vh] md:h-[76.9vh] lg:h-[73.9vh]"
     >
         <article>
             <h1 class="text-yellow-400 text-5xl mb-8 font-semibold">
