@@ -6,7 +6,7 @@
     import NotFound from "./lib/NotFound.svelte";
     import About from "./routes/about/About.svelte";
     import Home from "./routes/home/Home.svelte";
-    import HowItWorks from "./routes/how_it_works/HowItWorks.svelte";
+    import How from "./routes/how/How.svelte";
     import Join from "./routes/join/Join.svelte";
     import Login from "./routes/login/Login.svelte";
     import Projects from "./routes/projects/Projects.svelte";
@@ -22,7 +22,7 @@
     <Header />
     <main class="w-full bg-white dark:bg-black">
         <Route path="/" component={Home} />
-        <Route path="/how_it_works" component={HowItWorks} />
+        <Route path="/how" component={How} />
         <Route path="/join" component={Join} />
         <Route path="/projects" component={Projects} />
         <Route path="/about" component={About} />
