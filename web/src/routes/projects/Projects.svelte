@@ -46,6 +46,16 @@
 
 <svelte:head>
     <title>Projects - DIVD.works</title>
+    <meta
+        name="description"
+        content="Powered by Purpose - The goal of the DIVD.works project is to create a platform
+        that brings together young digital talent and employers."
+    />
+    <meta name="author" content="divd.works" />
+    <meta
+        name="keywords"
+        content="Digital Talent, Online Platform, Internship, DIVD, students"
+    />
 </svelte:head>
 
 <article class="flex justify-center">

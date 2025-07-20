@@ -1,6 +1,5 @@
 <script lang="ts">
     import { Link } from "svelte-navigator";
-    import DIVDWorks from "../../assets/divd-works-logo.svg";
     import Community from "../../assets/stock/community.png";
     import Company from "../../assets/stock/company.png";
     import Education from "../../assets/stock/education.webp";
@@ -10,6 +9,16 @@
 
 <svelte:head>
     <title>Home - DIVD.works</title>
+    <meta
+        name="description"
+        content="Powered by Purpose - The goal of the DIVD.works project is to create a platform
+        that brings together young digital talent and employers."
+    />
+    <meta name="author" content="divd.works" />
+    <meta
+        name="keywords"
+        content="Digital Talent, Online Platform, Internship, DIVD, students"
+    />
 </svelte:head>
 
 <article class="flex justify-center">

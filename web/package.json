@@ -9,7 +9,7 @@
     "preview": "rsbuild preview",
     "svelte-check": "svelte-check --tsconfig ./tsconfig.json",
     "predeploy": "yarn run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "yarn gh-pages -d dist"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.11",
