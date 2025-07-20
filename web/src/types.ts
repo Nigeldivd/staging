@@ -11,3 +11,7 @@ export type Team = {
   identifier: string;
   position: string;
 };
+
+export type CountryList = {
+  country: string;
+};
