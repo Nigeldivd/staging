@@ -1,5 +1,6 @@
 <script lang="ts">
     import { onMount } from "svelte";
+    import { Link } from "svelte-navigator";
     import DIVDWorks from "../../assets/divd-works-logo.svg";
     import Chatbot from "../../lib/Chatbot.svelte";
     import Slogan from "../../lib/Slogan.svelte";
@@ -102,21 +103,33 @@
                 contribute to a positive and productive work environment that
                 upholds the values and integrity of the organization.
             </p>
-            <br />
-            <p class="mb-4 text-xl text-gray-700 dark:text-gray-300">
-                The <a href="https://github.com/DIVD-works" target="_blank"
-                    >DIVD.works project</a
+            <p class="mb-4 mt-8 text-xl text-gray-700 dark:text-gray-300">
+                The
+                <a
+                    href="https://github.com/DIVD-works"
+                    target="_blank"
+                    class="text-yellow-400"
                 >
+                    DIVD.works project
+                </a>
                 is about creating an online platform to empower purpose. Connecting
                 talent to new opportunities. Contribution guidelines:
                 <a
                     href="https://news.victorgevers.com/working-in-the-open-c7517a513c07"
-                    target="_blank">Working in the open</a
-                >, following our
+                    target="_blank"
+                    class="text-yellow-400"
+                >
+                    Working in the open</a
+                >
+                , following our
                 <a
                     href="https://docs.google.com/document/d/1egKSxMCJv-G7pxNGPC2hmB24m_iIM-hc1sQe97ZvGbM/edit?usp=sharing"
-                    target="_blank">Code of Ethics</a
-                > and our project handbook, is how the community can get involved.
+                    target="_blank"
+                    class="text-yellow-400"
+                >
+                    Code of Ethics
+                </a>
+                and our project handbook, is how the community can get involved.
             </p>
         </article>
         {#each conduct as { caption, title, description, timeline }, _}
@@ -127,11 +140,13 @@
                     >
                         {title}
                     </h3>
-                    <a href={"#" + caption}>
+                    <Link to={"#" + caption}>
                         <span class="sr-only">{title}</span>
-                    </a>
+                    </Link>
                 </div>
-                <p class="my-4 text-lg text-black dark:text-white font-light">
+                <p
+                    class="my-4 text-lg text-gray-700 dark:text-gray-300 font-light"
+                >
                     {description}
                 </p>
             </article>
