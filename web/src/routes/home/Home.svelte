@@ -7,6 +7,34 @@
     import PoweredByPurpose from "../../assets/stock/Powered-by-purpose.png";
     import Student from "../../assets/stock/student.png";
     import Chatbot from "../../lib/Chatbot.svelte";
+    import type { CardSelection } from "../../types";
+
+    const card_selection: CardSelection[] = [
+        {
+            title: "Students",
+            caption: "Gain Real-World Experience",
+            source: Student,
+            alt: "student",
+        },
+        {
+            title: "Companies",
+            caption: "Discover Motivated Talent",
+            source: Company,
+            alt: "company",
+        },
+        {
+            title: "Education",
+            caption: "Prepare Students for the Future",
+            source: Education,
+            alt: "education",
+        },
+        {
+            title: "Community",
+            caption: "Collaborate and Innovate",
+            source: Community,
+            alt: "community",
+        },
+    ];
 
     onMount<void>((): void => {
         Chatbot();
@@ -60,16 +88,18 @@
                 <div
                     class="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-x-6"
                 >
-                    <a
-                        href="/projects"
+                    <Link
+                        to="/projects"
                         class="rounded-md bg-[#ffd736] px-3.5 py-2.5 text-sm font-semibold text-gray-800 shadow-xs hover:bg-[#fad84f] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F59E0B]"
-                        >Get started</a
                     >
-                    <a
-                        href="/about"
+                        Get started
+                    </Link>
+                    <Link
+                        to="/about"
                         class="text-sm/6 font-semibold text-white py-1.5"
-                        >Learn more <span aria-hidden="true">→</span></a
                     >
+                        Learn more <span aria-hidden="true">→</span>
+                    </Link>
                 </div>
                 <div
                     class="relative w-full max-w-full sm:max-w-xl mx-auto sm:mx-0"
@@ -97,50 +127,19 @@
             Why Choose Us?
         </h2>
         <article class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div
-                class="bg-gray-800 text-black p-6 rounded-lg shadow-md dark:bg-gray-200"
-            >
-                <h3 class="text-xl font-bold mb-2">Students</h3>
-                <p>Gain Real-World Experience</p>
-                <figure>
-                    <img src={Student} alt="student" class="w-16 h-auto mt-4" />
-                </figure>
-            </div>
-            <div
-                class="bg-gray-800 text-black p-6 rounded-lg shadow-md dark:bg-gray-200"
-            >
-                <h3 class="text-xl font-bold mb-2">Companies</h3>
-                <p>Discover Motivated Talent</p>
-                <figure>
-                    <img src={Company} alt="student" class="w-16 h-auto mt-4" />
-                </figure>
-            </div>
-            <div
-                class="bg-gray-800 text-black p-6 rounded-lg shadow-md dark:bg-gray-200"
-            >
-                <h3 class="text-xl font-bold mb-2">Education</h3>
-                <p>Prepare Students for the Future</p>
-                <figure>
-                    <img
-                        src={Education}
-                        alt="student"
-                        class="w-16 h-auto mt-4"
-                    />
-                </figure>
-            </div>
-            <div
-                class="bg-gray-800 text-black p-6 rounded-lg shadow-md dark:bg-gray-200"
-            >
-                <h3 class="text-xl font-bold mb-2">Community</h3>
-                <p>Collaborate and Innovate</p>
-                <figure>
-                    <img
-                        src={Community}
-                        alt="student"
-                        class="w-16 h-auto mt-4"
-                    />
-                </figure>
-            </div>
+            {#each card_selection as { title, caption, source, alt }, _}
+                <div
+                    class="bg-gray-100 text-black dark:text-white p-6 rounded-lg shadow-md dark:bg-gray-800"
+                >
+                    <h3 class="text-xl font-bold mb-2 text-yellow-400">
+                        {title}
+                    </h3>
+                    <p>{caption}</p>
+                    <figure class="invert-0 dark:invert">
+                        <img src={source} {alt} class="w-16 h-auto mt-4" />
+                    </figure>
+                </div>
+            {/each}
         </article>
     </section>
 </article>
@@ -179,12 +178,9 @@
             <p class="text-center text-xl lg:text-2xl font-bold text-black">
                 DIVD.works
             </p>
-            <hr class="border-2 w-3/4 mx-auto border-gray-700" />
-            <hr class="border-2 w-3/4 mx-auto border-gray-700" />
-            <hr class="border-2 w-3/4 mx-auto border-gray-700" />
-            <hr class="border-2 w-3/4 mx-auto border-gray-700" />
-            <hr class="border-2 w-3/4 mx-auto border-gray-700" />
-            <hr class="border-2 w-3/4 mx-auto border-gray-700" />
+            {#each { length: 6 } as _}
+                <hr class="border-2 w-3/4 mx-auto border-gray-700" />
+            {/each}
             <hr class="border-2 w-3/4 mx-auto border-gray-700 lg:hidden" />
         </article>
     </section>

@@ -30,3 +30,10 @@ export type SvgIcon = {
   source: string;
   alt: string;
 };
+
+export type CardSelection = {
+  title: string;
+  caption: string;
+  source: string;
+  alt: string;
+};
