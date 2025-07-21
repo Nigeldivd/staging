@@ -1,5 +1,7 @@
 <script lang="ts">
+    import { onMount } from "svelte";
     import DIVDWorks from "../../assets/divd-works-logo.svg";
+    import Chatbot from "../../lib/Chatbot.svelte";
     import Slogan from "../../lib/Slogan.svelte";
     import type { Conduct } from "../../types";
 
@@ -58,6 +60,10 @@
     ];
 
     export const divd_works: string = DIVDWorks;
+
+    onMount<void>((): void => {
+        Chatbot();
+    });
 </script>
 
 <svelte:head>

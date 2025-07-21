@@ -1,9 +1,12 @@
 <script lang="ts">
-    document.getElementsByTagName("body")[0].style =
-        "height: 100vh; overflow: hidden;";
-
+    import { onMount } from "svelte";
     import { ExclamationCircle, Icon } from "svelte-hero-icons";
     import { Link } from "svelte-navigator";
+    import Chatbot from "./Chatbot.svelte";
+
+    onMount<void>((): void => {
+        Chatbot();
+    });
 </script>
 
 <svelte:head>
@@ -58,5 +61,10 @@
         :global(.error) {
             animation: none;
         }
+    }
+
+    :global(body) {
+        height: 100vh;
+        overflow: hidden;
     }
 </style>

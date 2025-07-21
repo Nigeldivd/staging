@@ -1,10 +1,16 @@
 <script lang="ts">
+    import { onMount } from "svelte";
     import { Link } from "svelte-navigator";
     import Community from "../../assets/stock/community.png";
     import Company from "../../assets/stock/company.png";
     import Education from "../../assets/stock/education.webp";
     import PoweredByPurpose from "../../assets/stock/Powered-by-purpose.png";
     import Student from "../../assets/stock/student.png";
+    import Chatbot from "../../lib/Chatbot.svelte";
+
+    onMount<void>((): void => {
+        Chatbot();
+    });
 </script>
 
 <svelte:head>
