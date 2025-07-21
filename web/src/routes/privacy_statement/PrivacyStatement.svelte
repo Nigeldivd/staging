@@ -1,63 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DIVD.works | Privacy > policy</title>
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="preload" href="/fonts/ArialRoundedMTBold.woff2" as="font" type="/fonts/woff2" crossorigin>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-        }
+<script lang="ts">
+    import DIVDWorks from "../../assets/divd-works-logo.svg";
+    import Slogan from "../../lib/Slogan.svelte";
+    export const divd_works: string = DIVDWorks;
+</script>
 
-        .main {
-            text-align: center;
-            width: 90%;
-            max-width: 1200px;
-            margin-top: 20px; /* Adjust spacing between logo and iframe */
-        }
+<svelte:head>
+    <title>Privacy policy - DIVD.works</title>
+    <meta
+        name="description"
+        content="Powered by Purpose - The goal of the DIVD.works project is to create a platform
+        that brings together young digital talent and employers."
+    />
+    <meta name="author" content="divd.works" />
+    <meta
+        name="keywords"
+        content="Digital Talent, Online Platform, Internship, DIVD, students"
+    />
+</svelte:head>
 
-        .logo {
-            width: 200px; /* Adjust logo size */
-            margin-bottom: 20px; /* Space between logo and iframe */
-        }
+<article class="flex justify-center">
+    <section
+        class="px-3 lg:px-0 py-6 lg:py-12 flex flex-col items-center bg-white dark:bg-black gap-10
+        lg:gap-6 text-center lg:text-left justify-center w-full lg:w-2/3"
+    >
+        <Slogan {divd_works} />
+        <iframe
+            src="https://docs.google.com/document/d/e/2PACX-1vSvQ6NjQ5JAxvc6djVRV5IoutTs8QQMF_57keYWol6_5WyApUKzx-xgwBBduzMcUS4HURh2r4Rj8wa_/pub?embedded=true"
+            class="w-full h-61 border-none"
+            title="Privacy Statement"
+        >
+        </iframe>
 
-        .iframe-container {
-            width: 100%;
-            max-width: 1000px;
-            height: 80vh; /* Adjust height as needed */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border: 1px solid #000000; /* Optional border */
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-            outline: none; /* Removes any possible default outline */
-        }
-    </style>
-  </head>
-  <body>
-      <div class="main" style="font-family: 'Arial Rounded MT'; font-weight: bold; font-style: normal;">
-        <a href="/"><img class="logo " class="glow-filter" src="/img/divd-works-logo-v2.svg" alt="DIVD Works Logo" /></a>
-
-          <div class="iframe-container">
-              <iframe src="https://docs.google.com/document/d/e/2PACX-1vSvQ6NjQ5JAxvc6djVRV5IoutTs8QQMF_57keYWol6_5WyApUKzx-xgwBBduzMcUS4HURh2r4Rj8wa_/pub?embedded=true"
-                           style="width: 100%; height: 100%; border: none;">
-              </iframe>
-          </div>
-      </div>
-  </body>
-</html>
+        <hr class="w-full mt-4 text-black dark:text-white" />
+    </section>
+</article>

@@ -10,6 +10,7 @@
     import How from "./routes/how/How.svelte";
     import Join from "./routes/join/Join.svelte";
     import Login from "./routes/login/Login.svelte";
+    import PrivacyStatement from "./routes/privacy_statement/PrivacyStatement.svelte";
     import Projects from "./routes/projects/Projects.svelte";
 </script>
 
@@ -29,6 +30,7 @@
         <Route path="/about" component={About} />
         <Route path="/login" component={Login} />
         <Route path="/codeofconduct" component={CodeOfConduct} />
+        <Route path="/privacystatement" component={PrivacyStatement} />
         <Route path="*" component={NotFound} />
     </main>
     <Footer />

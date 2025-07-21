@@ -22,3 +22,11 @@ export type Conduct = {
   description: string;
   timeline: string;
 };
+
+export type SvgIcon = {
+  url: string;
+  target: string;
+  name: string;
+  source: string;
+  alt: string;
+};
