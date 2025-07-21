@@ -5,6 +5,7 @@
     import Header from "./lib/Header.svelte";
     import NotFound from "./lib/NotFound.svelte";
     import About from "./routes/about/About.svelte";
+    import CodeOfConduct from "./routes/code_of_conduct/CodeOfConduct.svelte";
     import Home from "./routes/home/Home.svelte";
     import How from "./routes/how/How.svelte";
     import Join from "./routes/join/Join.svelte";
@@ -27,6 +28,7 @@
         <Route path="/projects" component={Projects} />
         <Route path="/about" component={About} />
         <Route path="/login" component={Login} />
+        <Route path="/codeofconduct" component={CodeOfConduct} />
         <Route path="*" component={NotFound} />
     </main>
     <Footer />

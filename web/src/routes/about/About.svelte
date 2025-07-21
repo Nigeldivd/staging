@@ -1,6 +1,7 @@
 <script lang="ts">
     import { Link } from "svelte-navigator";
     import DIVDWorks from "../../assets/divd-works-logo.svg";
+    import PoweredByPurpose from "../../assets/stock/Powered-by-purpose.png";
     import Ahmed from "../../assets/team/Ahmed.jpg";
     import Akiko from "../../assets/team/akiko.jpeg";
     import Baran from "../../assets/team/baran.jpeg";
@@ -66,12 +67,12 @@
             position: "CISO",
         },
         {
-            source: Anonymous,
+            source: PoweredByPurpose,
             identifier: "Vacant",
             position: "Vacant",
         },
         {
-            source: Anonymous,
+            source: PoweredByPurpose,
             identifier: "Vacant",
             position: "Vacant",
         },

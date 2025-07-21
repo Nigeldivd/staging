@@ -93,7 +93,7 @@
             id="volunteerForm"
             action="https://submit.jotform.com/submit/250454217214347/"
             method="POST"
-            class="bg-black p-6 rounded-lg w-full max-w-2xl mx-auto flex flex-col gap-6"
+            class="p-6 rounded-lg w-full max-w-2xl mx-auto flex flex-col gap-6"
         >
             <h2 class="text-yellow-400 text-4xl font-semibold">Sign up</h2>
             <article class="flex flex-col md:flex-row gap-4">
@@ -110,7 +110,8 @@
                         id="firstname"
                         name="q4_name[first]"
                         placeholder="First Name"
-                        class="w-full p-2 bg-black border border-yellow-400 rounded text-[#ffd736]"
+                        class="w-full p-2 border border-yellow-400 rounded placeholder:text-gray-700
+                        text-gray-500 placeholder:dark:text-[#ffd736] dark:text-[#ffd736]"
                         required
                     />
                 </div>
@@ -127,7 +128,8 @@
                         id="lastname"
                         name="q4_name[last]"
                         placeholder="Last Name"
-                        class="w-full p-2 bg-black border border-yellow-400 rounded text-[#ffd736]"
+                        class="w-full p-2 border border-yellow-400 rounded placeholder:text-gray-700
+                        text-gray-500 placeholder:dark:text-[#ffd736] dark:text-[#ffd736]"
                         required
                     />
                 </div>
@@ -145,7 +147,8 @@
                     id="emailaddress"
                     name="q5_email"
                     placeholder="example@email.com"
-                    class="w-full p-2 bg-black border border-yellow-400 rounded text-[#ffd736]"
+                    class="w-full p-2 border border-yellow-400 rounded placeholder:text-gray-700
+                    text-gray-500 placeholder:dark:text-[#ffd736] dark:text-[#ffd736]"
                     required
                 />
                 <small class="text-gray-400 block mt-1"
@@ -166,7 +169,8 @@
                     id="phonenumber"
                     name="q6_phoneNumber[full]"
                     placeholder="0000000000"
-                    class="w-full p-2 bg-black border border-yellow-400 rounded text-[#ffd736]"
+                    class="w-full p-2 border border-yellow-400 rounded placeholder:text-gray-700
+                    text-gray-500 placeholder:dark:text-[#ffd736] dark:text-[#ffd736]"
                     required
                 />
                 <small class="text-gray-400 block mt-1"
@@ -174,11 +178,11 @@
                 >
             </article>
 
-            <article>
+            <article class="flex flex-col gap-10 lg:gap-6">
                 <label
                     for="address"
-                    class="block text-sm font-bold mb-2 text-gray-700 dark:text-gray-300
-                    after:content-['_*'] after:text-red-500"
+                    class="block text-sm font-bold text-gray-700 dark:text-gray-300
+                    after:content-['_*'] after:text-red-500 -mb-8 lg:-mb-4"
                 >
                     Address
                 </label>
@@ -187,7 +191,8 @@
                     id="streetaddress"
                     name="q20_address[addr_line1]"
                     placeholder="Street Address"
-                    class="w-full p-2 bg-black border border-yellow-400 rounded mb-2 text-[#ffd736]"
+                    class="w-full p-2 border border-yellow-400 rounded placeholder:text-gray-700
+                    text-gray-500 placeholder:dark:text-[#ffd736] dark:text-[#ffd736]"
                     required
                 />
                 <input
@@ -195,7 +200,8 @@
                     id="streetaddress2"
                     name="q20_address[addr_line2]"
                     placeholder="Street Address Line 2"
-                    class="w-full p-2 bg-black border border-yellow-400 rounded mb-2 text-[#ffd736]"
+                    class="w-full p-2 border border-yellow-400 rounded placeholder:text-gray-700
+                    text-gray-500 placeholder:dark:text-[#ffd736] dark:text-[#ffd736]"
                 />
                 <div class="flex flex-col md:flex-row gap-4">
                     <input
@@ -203,7 +209,8 @@
                         id="city"
                         name="q20_address[city]"
                         placeholder="City"
-                        class="flex-1 p-2 bg-black border border-yellow-400 rounded text-[#ffd736]"
+                        class="w-full p-2 border border-yellow-400 rounded placeholder:text-gray-700
+                        text-gray-500 placeholder:dark:text-[#ffd736] dark:text-[#ffd736]"
                         required
                     />
                     <input
@@ -211,7 +218,8 @@
                         id="state"
                         name="q20_address[state]"
                         placeholder="State / Province"
-                        class="flex-1 p-2 bg-black border border-yellow-400 rounded text-[#ffd736]"
+                        class="w-full p-2 border border-yellow-400 rounded placeholder:text-gray-700
+                        text-gray-500 placeholder:dark:text-[#ffd736] dark:text-[#ffd736]"
                         required
                     />
                 </div>
@@ -220,7 +228,8 @@
                     id="input_20_postal"
                     name="q20_address[postal]"
                     placeholder="Postal / Zip Code"
-                    class="w-full p-2 bg-black border border-yellow-400 rounded mt-2 text-[#ffd736]"
+                    class="w-full p-2 border border-yellow-400 rounded placeholder:text-gray-700
+                    text-gray-500 placeholder:dark:text-[#ffd736] dark:text-[#ffd736]"
                     required
                 />
             </article>
@@ -236,7 +245,8 @@
                 <select
                     id="country"
                     name="q7_country"
-                    class="w-full p-2 bg-black border border-yellow-400 rounded text-[#ffd736]"
+                    class="w-full p-2 border border-yellow-400 rounded placeholder:text-gray-700
+                    text-gray-500 placeholder:dark:text-[#ffd736] dark:text-[#ffd736] bg-white dark:bg-black"
                     required
                 >
                     <option value="" disabled selected>
@@ -263,7 +273,8 @@
                     id="linkedin"
                     name="q8_linkedinProfile"
                     placeholder="URL"
-                    class="w-full p-2 bg-black border border-yellow-400 rounded text-[#ffd736]"
+                    class="w-full p-2 border border-yellow-400 rounded placeholder:text-gray-700
+                    text-gray-500 placeholder:dark:text-[#ffd736] dark:text-[#ffd736]"
                     required
                 />
             </article>
@@ -280,7 +291,9 @@
                     id="input_11"
                     name="experiences"
                     placeholder="What makes you you and what makes you truly happy?"
-                    class="w-full p-2 bg-black border border-yellow-400 rounded text-[#ffd736]"
+                    class="w-full p-2 border border-yellow-400 rounded placeholder:text-gray-700
+                    text-gray-500 placeholder:dark:text-[#ffd736] dark:text-[#ffd736]"
+                    rows="5"
                 ></textarea>
             </article>
 
@@ -313,11 +326,12 @@
                     Signature
                 </label>
                 <div
-                    class="w-full p-6 bg-white text-black rounded-md flex items-center justify-center"
+                    class="w-full p-6 bg-gray-200 dark:bg-white text-black rounded-md flex items-center
+                    justify-center"
                 >
                     <canvas
                         id="signatureCanvas"
-                        class="border border-gray-300 rounded"
+                        class="border border-gray-400 rounded"
                     ></canvas>
                 </div>
                 <div class="mt-2 flex justify-between">
@@ -352,6 +366,8 @@
         >
             Thank you for filling in the form!
         </article>
+
+        <hr class="w-full mt-4 text-black dark:text-white" />
     </section>
 </article>
 

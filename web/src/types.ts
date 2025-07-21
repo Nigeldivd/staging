@@ -15,3 +15,10 @@ export type Team = {
 export type CountryList = {
   country: string;
 };
+
+export type Conduct = {
+  caption: string;
+  title: string;
+  description: string;
+  timeline: string;
+};
