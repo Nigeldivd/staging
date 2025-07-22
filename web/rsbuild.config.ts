@@ -3,5 +3,7 @@ import { pluginSvelte } from "@rsbuild/plugin-svelte";
 
 export default defineConfig({
   plugins: [pluginSvelte()],
-  base: "/staging",
+  output: {
+    assetPrefix: "./",
+  },
 });
