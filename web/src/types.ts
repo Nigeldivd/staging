@@ -37,3 +37,20 @@ export type CardSelection = {
   source: string;
   alt: string;
 };
+
+export type MenuItem = {
+  to: string;
+  title: string;
+};
+
+export type RoutePath = {
+  path: string;
+  component: Function;
+};
+
+export type SkillTrajectory = {
+  image: string;
+  alt: string;
+  title: string;
+  description: string;
+};

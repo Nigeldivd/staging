@@ -2,6 +2,7 @@
     import { Bars3, Icon, XMark } from "svelte-hero-icons";
     import { Link } from "svelte-navigator";
     import DIVDWorks from "../assets/divd-works-logo.svg";
+    import type { MenuItem } from "../types";
 
     let collapsed: boolean = true;
 
@@ -14,6 +15,56 @@
         collapsed = true;
         return;
     }
+
+    const menu_item: MenuItem[] = [
+        {
+            to: "/how",
+            title: "How It Works",
+        },
+        {
+            to: "/join",
+            title: "Join",
+        },
+        {
+            to: "/projects",
+            title: "Projects",
+        },
+        {
+            to: "/about",
+            title: "About",
+        },
+    ];
+
+    const hamburger_menu_item: MenuItem[] = [
+        ...menu_item,
+        {
+            to: "/codeofconduct",
+            title: "Code of Conduct",
+        },
+        {
+            to: "/privacystatement",
+            title: "Privacy Statement",
+        },
+        {
+            to: "/internships",
+            title: "Internships",
+        },
+        {
+            to: "/sustainability",
+            title: "Sustainability",
+        },
+        {
+            to: "/investors",
+            title: "Investors",
+        },
+        {
+            to: "/careers",
+            title: "Careers",
+        },
+    ];
+
+    let dropdown_collapsed: boolean = true;
+    let dropdown_menu: boolean = false;
 </script>
 
 <header class="bg-white dark:bg-black sticky top-0 z-10 shadow-md">
@@ -29,7 +80,7 @@
                 </figure>
             </Link>
         </article>
-        <button class="flex md:hidden" on:click={open_menu}>
+        <button class="flex md:hidden" onclick={open_menu}>
             <span class="sr-only">Open menu</span>
             <Icon
                 src={Bars3}
@@ -37,34 +88,61 @@
             />
         </button>
         <article class="hidden md:flex md:gap-x-12">
-            <Link
-                to="/how"
-                class="text-sm/6 font-semibold text-black dark:text-white"
-            >
-                How It Works
-            </Link>
-            <Link
-                to="/join"
-                class="text-sm/6 font-semibold text-black dark:text-white"
-            >
-                Join
-            </Link>
-            <Link
-                to="/projects"
-                class="text-sm/6 font-semibold text-black dark:text-white"
-            >
-                Internships & Projects
-            </Link>
-            <Link
-                to="/about"
-                class="text-sm/6 font-semibold text-black dark:text-white"
-            >
-                About
-            </Link>
+            {#each menu_item as { to, title }, index}
+                {#if index != menu_item.length - 1}
+                    <Link
+                        {to}
+                        class="text-sm/6 font-semibold text-black dark:text-white"
+                    >
+                        {title}
+                    </Link>
+                {:else}
+                    <article
+                        class="relative"
+                        onmouseover={(): boolean => {
+                            return !dropdown_menu
+                                ? (dropdown_collapsed = false)
+                                : dropdown_collapsed;
+                        }}
+                        onmouseleave={(): boolean => {
+                            return !dropdown_menu
+                                ? (dropdown_collapsed = true)
+                                : dropdown_collapsed;
+                        }}
+                    >
+                        <Link
+                            {to}
+                            class="text-sm/6 font-semibold text-black dark:text-white"
+                        >
+                            {title} <span aria-hidden="true">&#8595;</span>
+                        </Link>
+
+                        {#if !dropdown_collapsed}
+                            <div
+                                class="bg-gray-100 dark:bg-gray-900 absolute top-full opacity-95 rounded-b-2xl
+                                shadow-lg"
+                            >
+                                {#each hamburger_menu_item as { to, title }, index}
+                                    {#if index >= menu_item.length}
+                                        <Link
+                                            {to}
+                                            class="block px-3 py-4 text-base/7 font-semibold text-white
+                                            hover:bg-gray-200 dark:hover:bg-gray-800 duration-300 ease-in
+                                            hover:ease-out w-153"
+                                        >
+                                            {title}
+                                        </Link>
+                                    {/if}
+                                {/each}
+                            </div>
+                        {/if}
+                    </article>
+                {/if}
+            {/each}
         </article>
         <article class="hidden md:flex lg:flex-1 lg:justify-end">
             <Link
-                to="/login"
+                to="/"
                 class="text-sm/6 font-semibold text-black dark:text-white"
             >
                 Log in <span aria-hidden="true">&rarr;</span>
@@ -93,7 +171,7 @@
                             </figure>
                         </Link>
                         <span class="sr-only">Close menu</span>
-                        <button on:click={close_menu}>
+                        <button onclick={close_menu}>
                             <Icon
                                 src={XMark}
                                 class="-m-2.5 rounded-md p-2.5 text-gray-400 w-20"
@@ -103,38 +181,19 @@
                     <article class="mt-6 flow-root">
                         <div class="-my-6 divide-y divide-gray-500/25">
                             <div class="space-y-2 py-6">
-                                <Link
-                                    to="/how"
-                                    class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white
-                                    hover:bg-gray-800"
-                                >
-                                    How It Works
-                                </Link>
-                                <Link
-                                    to="/join"
-                                    class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white
-                                    hover:bg-gray-800"
-                                >
-                                    Join
-                                </Link>
-                                <Link
-                                    to="/projects"
-                                    class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white
-                                    hover:bg-gray-800"
-                                >
-                                    Internships & Projects
-                                </Link>
-                                <Link
-                                    to="/about"
-                                    class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white
-                                    hover:bg-gray-800"
-                                >
-                                    About
-                                </Link>
+                                {#each hamburger_menu_item as { to, title }, _}
+                                    <Link
+                                        {to}
+                                        class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold
+                                        text-white hover:bg-gray-800"
+                                    >
+                                        {title}
+                                    </Link>
+                                {/each}
                             </div>
                             <div class="py-6">
                                 <Link
-                                    to="/login"
+                                    to="/"
                                     class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-white
                                     hover:bg-gray-800"
                                 >

@@ -89,7 +89,7 @@
                     class="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-x-6"
                 >
                     <Link
-                        to="/projects"
+                        to="/internships"
                         class="rounded-md bg-[#ffd736] px-3.5 py-2.5 text-sm font-semibold text-gray-800 shadow-xs hover:bg-[#fad84f] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F59E0B]"
                     >
                         Get started

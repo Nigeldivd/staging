@@ -141,7 +141,7 @@
                     dark:bg-gray-800 dark:hover:bg-gray-700 rounded-2xl"
                     style="width: 250px; height: 60px; display: flex; align-items: center; justify-content: center;"
                 >
-                    <Link to="/join">
+                    <Link to="https://form.jotform.com/250672969917070">
                         <button class="cursor-pointer"
                             >Looking for an Internship?</button
                         >

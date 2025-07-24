@@ -5,13 +5,73 @@
     import Header from "./lib/Header.svelte";
     import NotFound from "./lib/NotFound.svelte";
     import About from "./routes/about/About.svelte";
+    import Careers from "./routes/careers/Careers.svelte";
     import CodeOfConduct from "./routes/code_of_conduct/CodeOfConduct.svelte";
     import Home from "./routes/home/Home.svelte";
     import How from "./routes/how/How.svelte";
+    import Internships from "./routes/internships/Internships.svelte";
+    import Investors from "./routes/investors/Investors.svelte";
     import Join from "./routes/join/Join.svelte";
     import Login from "./routes/login/Login.svelte";
     import PrivacyStatement from "./routes/privacy_statement/PrivacyStatement.svelte";
     import Projects from "./routes/projects/Projects.svelte";
+    import Sustainability from "./routes/sustainability/Sustainability.svelte";
+    import type { RoutePath } from "./types";
+
+    const route_path: RoutePath[] = [
+        {
+            path: "/",
+            component: Home,
+        },
+        {
+            path: "/how",
+            component: How,
+        },
+        {
+            path: "/join",
+            component: Join,
+        },
+        {
+            path: "/projects",
+            component: Projects,
+        },
+        {
+            path: "/about",
+            component: About,
+        },
+        //{
+        //path: "/login",
+        //component: Login,
+        //},
+        {
+            path: "/codeofconduct",
+            component: CodeOfConduct,
+        },
+        {
+            path: "/privacystatement",
+            component: PrivacyStatement,
+        },
+        {
+            path: "/internships",
+            component: Internships,
+        },
+        {
+            path: "/sustainability",
+            component: Sustainability,
+        },
+        {
+            path: "/investors",
+            component: Investors,
+        },
+        {
+            path: "/careers",
+            component: Careers,
+        },
+        {
+            path: "*",
+            component: NotFound,
+        },
+    ];
 </script>
 
 <svelte:head>
@@ -23,15 +83,9 @@
 <Router>
     <Header />
     <main class="w-full bg-white dark:bg-black">
-        <Route path="/" component={Home} />
-        <Route path="/how" component={How} />
-        <Route path="/join" component={Join} />
-        <Route path="/projects" component={Projects} />
-        <Route path="/about" component={About} />
-        <Route path="/login" component={Login} />
-        <Route path="/codeofconduct" component={CodeOfConduct} />
-        <Route path="/privacystatement" component={PrivacyStatement} />
-        <Route path="*" component={NotFound} />
+        {#each route_path as { path, component }, _}
+            <Route {path} {component} />
+        {/each}
     </main>
     <Footer />
 </Router>
