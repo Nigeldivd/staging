@@ -1,11 +1,9 @@
 <script lang="ts">
-    import { onMount } from "svelte";
     import { DocumentCheck, Icon } from "svelte-hero-icons";
     import DIVDWorks from "../../assets/divd-works-logo.svg";
     import CareerAdvancement from "../../assets/stock/career_advancement.png";
     import InternationalExposure from "../../assets/stock/international_exposure.png";
     import SkillDevelopment from "../../assets/stock/skill_development.png";
-    import Chatbot from "../../lib/Chatbot.svelte";
     import Slogan from "../../lib/Slogan.svelte";
     import type { SkillTrajectory } from "../../types";
 
@@ -34,10 +32,6 @@
     ];
 
     export const divd_works: string = DIVDWorks;
-
-    onMount<void>((): void => {
-        Chatbot();
-    });
 </script>
 
 <svelte:head>

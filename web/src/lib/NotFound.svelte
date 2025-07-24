@@ -1,12 +1,6 @@
 <script lang="ts">
-    import { onMount } from "svelte";
     import { ExclamationCircle, Icon } from "svelte-hero-icons";
     import { Link } from "svelte-navigator";
-    import Chatbot from "./Chatbot.svelte";
-
-    onMount<void>((): void => {
-        Chatbot();
-    });
 </script>
 
 <svelte:head>

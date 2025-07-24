@@ -1,15 +1,9 @@
 <script lang="ts">
-    import { onMount } from "svelte";
     import DIVDWorks from "../../assets/divd-works-logo.svg";
     import SustainabilityPicture from "../../assets/stock/sustainability.jpg";
-    import Chatbot from "../../lib/Chatbot.svelte";
     import Slogan from "../../lib/Slogan.svelte";
 
     export const divd_works: string = DIVDWorks;
-
-    onMount<void>((): void => {
-        Chatbot();
-    });
 </script>
 
 <svelte:head>

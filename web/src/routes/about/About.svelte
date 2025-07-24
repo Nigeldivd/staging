@@ -1,5 +1,4 @@
 <script lang="ts">
-    import { onMount } from "svelte";
     import { Link } from "svelte-navigator";
     import DIVDWorks from "../../assets/divd-works-logo.svg";
     import PoweredByPurpose from "../../assets/stock/Powered-by-purpose.png";
@@ -13,7 +12,6 @@
     import Nigel from "../../assets/team/Nigel.png";
     import Anonymous from "../../assets/team/stock.jpg";
     import Victor from "../../assets/team/Victor.jpg";
-    import Chatbot from "../../lib/Chatbot.svelte";
     import Slogan from "../../lib/Slogan.svelte";
     import type { Team } from "../../types";
 
@@ -82,10 +80,6 @@
 
     const draggable: boolean = false;
     export const divd_works: string = DIVDWorks;
-
-    onMount<void>((): void => {
-        Chatbot();
-    });
 </script>
 
 <svelte:head>
