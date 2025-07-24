@@ -61,11 +61,12 @@
                 src={PoweredByPurpose}
                 alt="Powered by Purpose"
                 class="w-full max-w-[300px] sm:max-w-[450px]"
+                fetchpriority="high"
             />
             <article
                 class="max-w-full sm:max-w-2xl text-center sm:text-left space-y-4"
             >
-                <h1 class="text-3xl sm:text-5xl font-bold text-yellow-400">
+                <h1 class="text-3xl sm:text-5xl font-bold text-yellow-500">
                     Powered by Purpose
                 </h1>
                 <p class="text-base sm:text-xl text-black dark:text-white">
@@ -117,7 +118,7 @@
 
 <article class="flex justify-center">
     <section>
-        <h2 class="text-4xl font-bold mb-6 text-center text-yellow-400">
+        <h2 class="text-4xl font-bold mb-6 text-center text-yellow-500">
             Why Choose Us?
         </h2>
         <article class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -125,7 +126,7 @@
                 <div
                     class="bg-gray-100 text-black dark:text-white p-6 rounded-lg shadow-md dark:bg-gray-800"
                 >
-                    <h3 class="text-xl font-bold mb-2 text-yellow-400">
+                    <h3 class="text-xl font-bold mb-2 text-yellow-500">
                         {title}
                     </h3>
                     <p>{caption}</p>
@@ -146,7 +147,7 @@
         lg:gap-6 text-center lg:text-left justify-center w-full lg:w-2/3"
     >
         <article class="w-full lg:w-[400px] text-center">
-            <h2 class="text-yellow-400 text-5xl font-semibold">Newsletter</h2>
+            <h2 class="text-yellow-500 text-5xl font-semibold">Newsletter</h2>
             <p class="text-base lg:text-xl text-black dark:text-white my-16">
                 Welkom bij de nieuwsbrief van DIVD.works! Wil je op de hoogte
                 blijven van de laatste updates, nieuwe projecten, inspirerende
@@ -187,7 +188,7 @@
         class="px-3 lg:px-0 py-6 lg:py-12 flex flex-col items-center bg-white dark:bg-black gap-10
         lg:gap-6 text-center lg:text-left justify-center w-full lg:w-2/3"
     >
-        <h2 class="text-yellow-400 text-5xl mb-6 font-semibold">
+        <h2 class="text-yellow-500 text-5xl mb-6 font-semibold">
             Ready to Bridge the Gap?
         </h2>
         <Link to="/join">

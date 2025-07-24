@@ -7,7 +7,11 @@
 <article>
     <Link to="/">
         <figure>
-            <img class="w-full h-24 mb-4" src={divd_works} alt="divd.works" />
+            <img
+                class="w-full h-24 mb-4"
+                src={divd_works}
+                alt="DIVD.works Powered by Purpose"
+            />
         </figure>
     </Link>
     <h1 class="text-black dark:text-white text-center text-3xl font-semibold">

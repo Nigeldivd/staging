@@ -76,7 +76,11 @@
             <Link to="/" class="-m-1.5 p-1.5">
                 <span class="sr-only">DIVD.works</span>
                 <figure>
-                    <img class="h-8 w-auto" src={DIVDWorks} alt="DIVD.works" />
+                    <img
+                        class="h-8 w-auto"
+                        src={DIVDWorks}
+                        alt="DIVD.works Powered by Purpose"
+                    />
                 </figure>
             </Link>
         </article>

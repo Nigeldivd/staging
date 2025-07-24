@@ -72,6 +72,8 @@
             component: NotFound,
         },
     ];
+
+    document.documentElement.lang = "en";
 </script>
 
 <svelte:head>
