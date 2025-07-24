@@ -82,7 +82,7 @@
     <meta charset="UTF-8" />
 </svelte:head>
 
-<Router>
+<Router basepath="/">
     <Header />
     <main class="w-full bg-white dark:bg-black">
         {#each route_path as { path, component }, _}
